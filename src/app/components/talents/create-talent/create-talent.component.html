@@ -1,0 +1,42 @@
+<div>
+  <br>
+  <mat-card>
+    <section class="mat-typography">
+      <h3>Créer un nouveau client</h3>
+    </section>
+    <mat-divider>
+
+    </mat-divider>
+    <br>
+    <form action="" [formGroup]="createForm" class="create-form">
+      <mat-form-field class="field-full-width">
+        <input type="text" matInput placeholder="Prénom talent" formControlName="prenom" #prenom>
+      </mat-form-field>
+      <mat-form-field class="field-full-width">
+        <input type="text" matInput placeholder="Nom talent" formControlName="nom" #nom>
+      </mat-form-field>
+      <mat-form-field class="field-full-width">
+        <mat-select placeholder="Sexe talent" formControlName="sexe" #sexe>
+          <mat-option value="Masculin">Masculin</mat-option>
+          <mat-option value="Feminin">Feminin</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-divider></mat-divider>
+      <mat-form-field class="field-full-width">
+        <input type="text" matInput placeholder="Téléphone talent" formControlName="tel" #tel>
+      </mat-form-field>
+      <mat-form-field class="field-full-width">
+        <textarea matInput placeholder="Adresse talent" formControlName="adresse" #adresse></textarea>
+      </mat-form-field>
+      <br><br>
+      <button mat-raised-button color="accent" [routerLink]="['/listtalent']" > Retour</button>
+      <button
+      type="submit"
+      (click)="addTalent(prenom.value, nom.value, sexe.value, tel.value, adresse.value)"
+      [disabled]='createForm.pristine || createForm.invalid'
+      mat-raised-button
+      color="primary">Enregistrer</button>
+    </form>
+  </mat-card>
+</div>
+

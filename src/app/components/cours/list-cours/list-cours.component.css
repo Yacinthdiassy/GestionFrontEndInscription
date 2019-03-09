@@ -1,0 +1,26 @@
+.card {
+  min-width: 80%;
+}
+a {
+  cursor: pointer;
+}
+
+.buttonCreer{
+  display: flex;
+  width: 130px;
+}
+table {
+  max-height: 500px;
+  min-width: 100%;
+  overflow: auto;
+  max-height: 500px;
+}
+.th1{
+  background-color: cadetblue
+}
+.th2{
+  background-color: coral
+}
+th{
+  width: 10%;
+}
